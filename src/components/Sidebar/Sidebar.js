@@ -16,6 +16,7 @@ export const SidebarContainer = styled.aside`
     transition: .3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+    z-index: 1000;
 `;
 
 export const CloseIcon = styled(FaTimes)`
@@ -76,8 +77,10 @@ export default function Sidebar({ isOpen, toggle, navLinks }) {
 
             <SidebarWrapper>
                 <SidebarMenu>
-                    {navLinks.map((data, i) => 
-                        <SidebarLink to={data.link}>{data.title}</SidebarLink>
+                    {navLinks.map((data, i) =>
+                        <SidebarLink to={data.link} onClick={toggle}>
+                            {data.title}
+                        </SidebarLink>
                     )}
                 </SidebarMenu>
             </SidebarWrapper>

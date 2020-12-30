@@ -12,11 +12,22 @@ const Nav = styled.nav`
 
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 
+    z-index: 100;
+
+    position: sticky;
+    top:0;
+
+    background: #fff;
+
     @media screen and (max-width: 959px) {
         padding: 0rem 5rem;
     }
     @media screen and (max-width: 859px) {
         padding: 1.15rem 5rem;
+    }
+
+    @media screen and (max-width: 499px) {
+        padding: 1.15rem 1.3rem;
     }
 `;
 
@@ -55,7 +66,7 @@ const NavLink = styled.li`
         width: 100%;
         height: 5px;
         background-color: #f00946;
-        bottom: -3px;
+        bottom: 0px;
         left: 0;
         transition: 0.3s;
         opacity: 0;

@@ -4,11 +4,11 @@ export const navLinks = [
         title: 'Inicio'
     },
     {
-        link: '/',
+        link: '/nosotros',
         title: 'Nosotros'
     },
     {
-        link: '/',
+        link: '/staff',
         title: 'Staff Médico'
     },
     {
